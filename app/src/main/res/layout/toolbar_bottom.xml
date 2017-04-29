@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:layout_gravity="bottom"
+
+
+    >
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/spacing_small"
+
+
+            >
+            <ImageView
+               style="@style/Toolbaritem"
+                android:src="@drawable/discover_icon"
+                android:id="@+id/icon_discover"
+                />
+            <TextView
+                style="@style/Toolbaritem"
+                android:layout_below="@+id/icon_discover"
+                android:text="@string/text_discover"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/spacing_small"
+
+            >
+            <ImageView
+                style="@style/Toolbaritem"
+                android:src="@drawable/map"
+                android:id="@+id/icon_map"
+
+                />
+            <TextView
+                style="@style/Toolbaritem"
+                android:layout_below="@+id/icon_map"
+                android:text="@string/text_Map"
+
+               />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/spacing_small">
+            <ImageView
+                style="@style/Toolbaritem"
+                android:src="@drawable/my_post"
+                android:id="@+id/icon_mypost"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                style="@style/Toolbaritem"
+                android:layout_below="@+id/icon_mypost"
+                android:text="@string/text_MyPosts"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/spacing_small">
+            <ImageView
+               style="@style/Toolbaritem"
+                android:src="@drawable/request"
+                android:id="@+id/icon_requests"/>
+            <TextView
+                style="@style/Toolbaritem"
+                android:layout_below="@+id/icon_requests"
+                android:text="@string/text_Requests"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/spacing_small"
+            android:gravity="center">
+            <ImageView
+                style="@style/Toolbaritem"
+                android:src="@drawable/my_network"
+                android:id="@+id/icon_mynetwork"/>
+            <TextView
+               style="@style/Toolbaritem"
+                android:layout_below="@+id/icon_mynetwork"
+                android:text="@string/text_MyNetwork"
+                />
+        </RelativeLayout>
+
+
+</LinearLayout>

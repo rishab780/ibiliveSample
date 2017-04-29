@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ibiliveSample</string>
+    <string name="text_discover">Discover</string>
+    <string name="text_Map">Map</string>
+    <string name="text_MyPosts">My Posts</string>
+    <string name="text_Requests">Requests</string>
+    <string name="text_MyNetwork">My Network</string>
+    <string name="text_search">Search a place</string>
+    <string name="text_exploreparis">Explore Paris</string>
+    <string name="location_paris">Paris</string>
+    <string name="time">6d 2h left</string>
+    <string name="reviews">222 Reviews</string>
+    <string name="info">Lorem ipsum dolor sit amet, consectetur lorem ipsum
+dolor sit amet, consectetur lorem ipsum.</string>
+
+</resources>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/frame">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/paris"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/trans_background">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_exploreparis"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_xmlarge"
+            android:layout_margin="@dimen/spacing_small"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/location_paris"
+            android:textSize="@dimen/font_large"
+            android:textColor="@color/white"
+            android:layout_marginRight="@dimen/spacing_small"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:id="@+id/text_location"
+           />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/map"
+            android:layout_toLeftOf="@+id/text_location"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            /> </RelativeLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/white"
+            android:layout_marginEnd="5dp"
+            android:text="Send Request"
+            android:background="@color/colorPrimary"
+            android:textSize="@dimen/font_normal"
+            android:padding="@dimen/spacing_tiny"
+            android:textAllCaps="false"/>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_below="@+id/frame"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pic_image_view"
+            android:src="@drawable/add_image_icon"
+
+           />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+            <TextView
+                android:id="@+id/tv_name"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="lutti"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/spacing_tiny"
+                android:textSize="@dimen/font_small"
+                android:textColor="#000"/>
+
+
+            <RatingBar
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="6"
+                android:rating="5"
+                />
+        </LinearLayout>
+            <TextView
+                android:layout_marginLeft="@dimen/spacing_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time"
+                android:textSize="@dimen/font_small"
+                android:textColor="#000"
+                android:paddingTop="@dimen/spacing_tiny"
+                android:drawableLeft="@drawable/time_1"
+                android:gravity="center_vertical"/>
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reviews"
+                android:textSize="@dimen/font_small"
+                android:textColor="#000"
+                android:paddingTop="@dimen/spacing_tiny"
+                android:drawableLeft="@drawable/reviews"
+                android:gravity="center_vertical"/>
+
+        </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/info"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

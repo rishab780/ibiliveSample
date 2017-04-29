@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark">
+    <ImageView
+        android:src="@drawable/burger"
+        android:id="@+id/btn_burger"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        />
+    <TextView
+
+        android:id="@+id/text_title"
+        style="@style/Toolbaritem"
+        android:text="@string/text_discover"
+        android:textSize="@dimen/font_xlarge"
+        android:padding="@dimen/spacing_small"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/btn_gridview"
+        android:layout_height="wrap_content"
+        android:src="@drawable/grid_view"
+        android:layout_alignParentRight="true"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sorti"
+        android:id="@+id/btn_sort"
+        android:layout_toLeftOf="@+id/btn_gridview"/>
+
+
+
+
+</RelativeLayout>
