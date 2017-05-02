@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_medium">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/mynetworkpic"
+        android:layout_height="@dimen/mynetworkpic"
+        android:src="@drawable/paris"
+        android:layout_marginLeft="@dimen/spacing_small" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/font_normal"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:layout_toEndOf="@id/profile_image"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/user_name"
+        android:layout_marginLeft="@dimen/spacing_small" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/location_paris"
+        android:drawableLeft="@drawable/icon_location"
+        android:layout_below="@id/user_name"
+        android:layout_toRightOf="@id/profile_image"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:drawablePadding="@dimen/spacing_very_tiny"
+        android:textSize="@dimen/font_small" />
+
+    <RatingBar
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:id="@+id/ratingbarnetwork"
+        android:theme="@style/RatingBar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circular_button"
+        android:text="@string/connect"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal"
+        android:padding="@dimen/spacing_small"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ratingbarnetwork"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:layout_marginTop="@dimen/spacing_tiny"
+        android:id="@+id/btn_connect" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/btn_connect"
+        android:background="@color/trans_background" />
+
+
+</RelativeLayout>

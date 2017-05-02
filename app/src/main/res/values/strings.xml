@@ -13,4 +13,6 @@
     <string name="info">Lorem ipsum dolor sit amet, consectetur lorem ipsum
 dolor sit amet, consectetur lorem ipsum.</string>
 
+    <string name="name">Evelyn</string>
+    <string name="connect">Connect</string>
 </resources>

@@ -5,21 +5,21 @@
     android:layout_height="match_parent">
     <include layout="@layout/toolbar_top"
         android:id="@+id/idtoolbar_title"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/idtoolbar_title"
-        android:id="@+id/idtoolbar_search">
-        <include
-            layout="@layout/toolbar_search"
-            />
-    </LinearLayout>
+
     <!--<android.support.v7.app.AlertController.RecycleListView-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="wrap_content"-->
         <!--android:scrollbars="vertical">-->
 
     <!--&lt;!&ndash;</android.support.v7.app.AlertController.RecycleListView>&ndash;&gt;-->
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idtoolbar_title"
+        android:id="@+id/vpswipe"
+        android:layout_above="@+id/idtoolbar_bottom">
+
+    </android.support.v4.view.ViewPager>
 
    <LinearLayout
        android:layout_width="match_parent"

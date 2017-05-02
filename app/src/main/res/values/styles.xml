@@ -21,4 +21,10 @@
 
     </style>
 
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/trans_background</item>
+        <item name="colorControlActivated">#f6a623</item>
+    </style>
+
+
 </resources>

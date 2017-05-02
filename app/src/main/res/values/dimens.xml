@@ -45,4 +45,5 @@
     <dimen name="bottom_ellipsis_height">4dp</dimen>
     <dimen name="post_image_height">250dp</dimen>
     <dimen name="empty_nav_view_height">25dp</dimen>
+    <dimen name="mynetworkpic">50dp</dimen>
 </resources>
