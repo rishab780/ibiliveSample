@@ -1,5 +1,6 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
+
 buildscript {
     repositories {
         jcenter()
@@ -15,6 +16,19 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+    }
+    task checkstyle(type: Checkstyle) {
+        showViolations = true
+        configFile file("../checkStyleConfig/checkstyle.xml")
+
+        source 'src/main/java'
+        include '**/*.java'
+        exclude '**/gen/**'
+        exclude '**/R.java'
+        exclude '**/BuildConfig.java'
+
+        // empty classpath
+        classpath = files()
     }
 }
 

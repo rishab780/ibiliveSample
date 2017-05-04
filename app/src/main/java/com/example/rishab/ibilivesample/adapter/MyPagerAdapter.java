@@ -5,30 +5,40 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.util.Log;
 
-import com.example.rishab.ibilivesample.fragment.DiscoverFragment;
+import com.example.rishab.ibilivesample.constants.Constants;
+import com.example.rishab.ibilivesample.fragment.DiscoverMyPostFragment;
+import com.example.rishab.ibilivesample.fragment.MapFragment;
 import com.example.rishab.ibilivesample.fragment.MyNetworkFragment;
 
 /**
  * Created by Rishab on 01-05-2017.
  */
 
-public class MyPagerAdapter extends FragmentPagerAdapter {
+public class MyPagerAdapter extends FragmentPagerAdapter implements Constants {
 
 
-    public MyPagerAdapter(FragmentManager fm) {
+    /**
+     * @param fm fragment manager
+     */
+    public MyPagerAdapter(final FragmentManager fm) {
         super(fm);
     }
 
     @Override
 
-    public Fragment getItem(int position) {
+    public Fragment getItem(final int position) {
 
         switch (position) {
             case 0:
                 Log.d("log", "position : " + position);
-                return new DiscoverFragment();
+                return DiscoverMyPostFragment.getInstance(DISC_FRAG);
             case 1:
+                return new MapFragment();
+            case 2:
+                return DiscoverMyPostFragment.getInstance(MYPOST_FRAG);
+            case 3:
                 return new MyNetworkFragment();
+
 
             default:
                 Log.d("log", "position is null");
@@ -40,8 +50,13 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 2;
+        return 4;
 
+
+    }
+
+    @Override
+    public void init() {
 
     }
 }

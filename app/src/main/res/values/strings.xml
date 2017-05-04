@@ -15,4 +15,6 @@ dolor sit amet, consectetur lorem ipsum.</string>
 
     <string name="name">Evelyn</string>
     <string name="connect">Connect</string>
+    <string name="mode">mode</string>
+    <string name="google_maps_api_key">AIzaSyBr3DtafTtcsHM-mC9IdrSz2A4k_yH9-bM</string>
 </resources>

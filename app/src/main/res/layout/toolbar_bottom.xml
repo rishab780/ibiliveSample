@@ -14,6 +14,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="@dimen/spacing_small"
+            android:id="@+id/view_discover"
 
 
             >
@@ -33,6 +34,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="@dimen/spacing_small"
+            android:id="@+id/view_map"
 
             >
             <ImageView
@@ -52,7 +54,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:padding="@dimen/spacing_small">
+            android:padding="@dimen/spacing_small"
+            android:id="@+id/view_myposts">
             <ImageView
                 style="@style/Toolbaritem"
                 android:src="@drawable/my_post"
@@ -68,7 +71,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:padding="@dimen/spacing_small">
+            android:padding="@dimen/spacing_small"
+            android:id="@+id/view_request">
             <ImageView
                style="@style/Toolbaritem"
                 android:src="@drawable/request"
@@ -84,7 +88,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="@dimen/spacing_small"
-            android:gravity="center">
+            android:gravity="center"
+            android:id="@+id/view_mynetwork">
             <ImageView
                 style="@style/Toolbaritem"
                 android:src="@drawable/my_network"

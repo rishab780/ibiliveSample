@@ -7,15 +7,27 @@ package com.example.rishab.ibilivesample.model;
 public class MyNetwork {
     private String name;
 
-    public MyNetwork(String name) {
+    /**
+     * @param name name of user
+     */
+    public MyNetwork(final String name) {
         this.name = name;
     }
 
+    /**
+     *
+     * @return name
+     */
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    /**
+     *
+     * @param name name
+     */
+
+    public void setName(final String name) {
         this.name = name;
     }
 }

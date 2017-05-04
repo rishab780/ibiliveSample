@@ -1,106 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawerLayout"
-    style="@style/match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    tools:context="com.example.android.zeplin.MainActivity">
+    android:layout_width="275dp"
+    android:layout_gravity="start"
+    android:layout_height="match_parent"
+    android:background="@color/search_background">
 
-    <FrameLayout
-        android:id="@+id/framelayout"
-        style="@style/match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_huge"
+        android:background="@color/colorPrimaryDark" />
 
-        <include layout="@layout/custom_header"></include>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/drawerpic"
+        android:layout_height="@dimen/drawerpic"
+        android:layout_marginTop="-50dp"
+        android:src="@drawable/paris"
+        android:layout_gravity="center" />
 
-    </FrameLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textSize="@dimen/font_xmlarge"
+        android:textColor="@color/colorPrimary"
+        android:textAlignment="center"
+        android:paddingTop="@dimen/spacing_small" />
 
-    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
-        style="@style/match_parent"
-        android:layout_gravity="start">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_tiny">
 
-        <LinearLayout
-            android:id="@+id/kaam"
-            style="@style/match_parent"
-            android:background="@color/search_bar_background"
-            android:orientation="vertical">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/location_paris"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="@dimen/spacing_small" />
 
-            <ImageView
-                android:id="@+id/image"
-                style="@style/match_parent"
-                android:layout_height="@dimen/top_textview_size"
-                android:background="@color/colorPrimaryDark" />
-
-            <LinearLayout
-                android:id="@+id/linear"
-                style="@style/linear_layout_top"
-                android:background="@color/search_bar_background">
-
-                <TextView
-                    android:id="@+id/ndPersonName"
-                    style="@style/tv_menu_start"
-                    android:layout_marginTop="@dimen/margin_top"
-                    android:text="@string/name_sidemenu"
-                    android:textColor="@color/colorPrimaryDark" />
-
-                <TextView
-                    android:id="@+id/ndCountryName"
-                    style="@style/tv_menu_start"
-                    android:drawableRight="@drawable/edit_icon"
-                    android:paddingLeft="@dimen/padding_left"
-                    android:text="@string/place_sidemenu" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/linear_layout_bottom">
-
-                <TextView
-
-                    style="@style/tv_menuBottom"
-                    android:drawableEnd="@drawable/home_icon"
-                    android:text="@string/home"
-
-                    />
-
-                <TextView
-                    style="@style/tv_menuBottom"
-                    android:drawableEnd="@drawable/card_icon"
-                    android:text="@string/Cards_sub" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/linear_layout_bottom">
-
-                <TextView
-                    style="@style/tv_menuBottom"
-                    android:drawableEnd="@drawable/phone_icon"
-                    android:text="@string/support" />
-
-                <TextView
-                    style="@style/tv_menuBottom"
-                    android:drawableEnd="@drawable/profile_icon_3"
-                    android:text="@string/request" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/linear_layout_bottom">
-
-                <TextView
-                    style="@style/tv_menuBottom"
-                    android:drawableEnd="@drawable/profile_icon"
-                    android:text="@string/share" />
-
-                <TextView
-                    style="@style/tv_menuBottom"
-                    android:drawableEnd="@drawable/profile_icon_2"
-                    android:text="@string/logout" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <FrameLayout
-            style="@style/framelayout_image"
-            android:layout_centerHorizontal="true">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile_image"
-                style="@style/circular_image"
-                android:src="@drawable/paris" />
-        </FrameLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/edit_icon"
+            android:layout_alignParentRight="true" />
     </RelativeLayout>
-</android.support.v4.widget.DrawerLayout>
+
+    <LinearLayout style="@style/drawerComponent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_large"
+            android:text="Home"
+            android:drawableRight="@drawable/home_icon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_large"
+            android:text="Cards/Subscription"
+            android:drawableRight="@drawable/card_icon" />
+
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/drawerComponent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_large"
+            android:text="Support"
+            android:drawableRight="@drawable/phone_icon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_large"
+            android:text="Requests"
+            android:drawableRight="@drawable/profile_icon_1" />
+
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/drawerComponent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_large"
+            android:text="Share"
+            android:drawableRight="@drawable/profile_icon_3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_large"
+            android:text="Logout"
+            android:drawableRight="@drawable/profile_icon" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

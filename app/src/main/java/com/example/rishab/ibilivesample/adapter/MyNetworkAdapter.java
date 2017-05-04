@@ -19,14 +19,18 @@ import java.util.ArrayList;
 
 public class MyNetworkAdapter extends RecyclerView.Adapter<MyNetworkAdapter.ViewHolder> {
     private ArrayList<MyNetwork> networks;
+    private Context context;
 
-
-    public MyNetworkAdapter(ArrayList<MyNetwork> networks, Context context) {
+    /**
+     * @param networks array list
+     * @param context  context
+     */
+    public MyNetworkAdapter(final ArrayList<MyNetwork> networks, final Context context) {
         this.networks = networks;
         this.context = context;
     }
 
-    private Context context;
+
 
     @Override
     public ViewHolder onCreateViewHolder(final ViewGroup parent, final int viewType) {
@@ -38,7 +42,7 @@ public class MyNetworkAdapter extends RecyclerView.Adapter<MyNetworkAdapter.View
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, int position) {
+    public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
         ViewHolder holder = (ViewHolder) viewHolder;
         MyNetwork currentLocation = networks.get(position);
         holder.name.setText(currentLocation.getName());

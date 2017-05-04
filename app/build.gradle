@@ -1,4 +1,10 @@
 apply plugin: 'com.android.application'
+apply plugin: 'checkstyle'
+
+preBuild.dependsOn('checkstyle')
+assemble.dependsOn('lint')
+check.dependsOn('checkstyle')
+
 
 android {
     compileSdkVersion 25
@@ -20,6 +26,8 @@ android {
 }
 
 dependencies {
+    compile 'com.google.android.gms:play-services-maps:9.8.0'
+    compile 'com.google.android.gms:play-services-location:9.8.0'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.android.support:recyclerview-v7:25.3.1'
     compile fileTree(dir: 'libs', include: ['*.jar'])

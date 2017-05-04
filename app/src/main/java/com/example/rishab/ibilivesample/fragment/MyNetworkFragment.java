@@ -25,7 +25,7 @@ public class MyNetworkFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_mynetwork, container, false);
         networks = new ArrayList<MyNetwork>();
         networks.add(new MyNetwork("EVelyn"));
