@@ -2,6 +2,7 @@ package com.example.rishab.ibilivesample.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,9 +21,20 @@ import java.util.ArrayList;
  */
 
 public class LocationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+    private static final int REPLICATE = 10;
     private ArrayList<LocationsModelClass> locations;
     private int mode;
     private Context context;
+
+    /**
+     * @param context context of request fragment
+     * @param mode    mode
+     */
+    public LocationAdapter(final int mode, final Context context) {
+        Log.d("debuglona", "Sex on the beach hardcore");
+        this.mode = mode;
+        this.context = context;
+    }
 
     /**
      * @param locations arraylist
@@ -30,6 +42,7 @@ public class LocationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
      * @param mode      mode of the adapter
      */
     public LocationAdapter(final ArrayList<LocationsModelClass> locations, final Context context, final int mode) {
+        Log.d("debuglona", "Sex on the beach");
         this.locations = locations;
         this.context = context;
         this.mode = mode;
@@ -41,6 +54,9 @@ public class LocationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         //context = parent.getContext();
         View itemView;
         itemView = LayoutInflater.from(context).inflate(R.layout.itemview_discover, parent, false);
+        if (mode == Constants.REQUEST_FRAG) {
+            itemView = LayoutInflater.from(context).inflate(R.layout.itemview_requests, parent, false);
+        }
         //ViewHolder viewHolder = new ViewHolder(itemView);
         return new ViewHolder(itemView);
     }
@@ -48,24 +64,25 @@ public class LocationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
     @Override
     public void onBindViewHolder(final RecyclerView.ViewHolder viewHolder, final int position) {
         ViewHolder holder = (ViewHolder) viewHolder;
-        LocationsModelClass currentLocation = locations.get(position);
-        if (mode == Constants.DISC_FRAG) {
-            holder.info.setText(currentLocation.getInfo());
+        if (locations != null) {
+            LocationsModelClass currentLocation = locations.get(position);
+            if (mode == Constants.DISC_FRAG) {
+                holder.info.setText(currentLocation.getInfo());
 
-            holder.toggle.setVisibility(View.GONE);
+                holder.toggle.setVisibility(View.GONE);
 
-            holder.trash.setVisibility(View.GONE);
-            holder.edit.setVisibility(View.GONE);
-        } else {
-            holder.info.setText(currentLocation.getInfo());
-            holder.location.setVisibility(View.GONE);
-            holder.tvlocation.setVisibility(View.GONE);
-            holder.name.setVisibility(View.INVISIBLE);
-            holder.star.setVisibility(View.INVISIBLE);
-            holder.display.setVisibility(View.INVISIBLE);
+                holder.trash.setVisibility(View.GONE);
+                holder.edit.setVisibility(View.GONE);
+            } else {
+                holder.info.setText(currentLocation.getInfo());
+                holder.location.setVisibility(View.GONE);
+                holder.tvlocation.setVisibility(View.GONE);
+                holder.name.setVisibility(View.INVISIBLE);
+                holder.star.setVisibility(View.INVISIBLE);
+                holder.display.setVisibility(View.INVISIBLE);
 
+            }
         }
-
     }
 
 
@@ -74,8 +91,10 @@ public class LocationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
      */
     @Override
     public int getItemCount() {
-
-        return locations.size();
+        if (locations != null) {
+            return locations.size();
+        }
+        return REPLICATE;
     }
 
     /**
@@ -107,8 +126,6 @@ public class LocationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             edit = (ImageView) itemView.findViewById(R.id.edit_btn);
             location = (ImageView) itemView.findViewById(R.id.image_location);
             tvlocation = (TextView) itemView.findViewById(R.id.text_location);
-
-
 
 
         }

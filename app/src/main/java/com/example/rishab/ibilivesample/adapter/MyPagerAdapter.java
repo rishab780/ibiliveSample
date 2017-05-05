@@ -9,6 +9,7 @@ import com.example.rishab.ibilivesample.constants.Constants;
 import com.example.rishab.ibilivesample.fragment.DiscoverMyPostFragment;
 import com.example.rishab.ibilivesample.fragment.MapFragment;
 import com.example.rishab.ibilivesample.fragment.MyNetworkFragment;
+import com.example.rishab.ibilivesample.fragment.RequestsFragment;
 
 /**
  * Created by Rishab on 01-05-2017.
@@ -37,6 +38,8 @@ public class MyPagerAdapter extends FragmentPagerAdapter implements Constants {
             case 2:
                 return DiscoverMyPostFragment.getInstance(MYPOST_FRAG);
             case 3:
+                return new RequestsFragment();
+            case 4:
                 return new MyNetworkFragment();
 
 
@@ -50,7 +53,7 @@ public class MyPagerAdapter extends FragmentPagerAdapter implements Constants {
 
     @Override
     public int getCount() {
-        return 4;
+        return 5;
 
 
     }

@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.example.rishab.ibilivesample.R;
 import com.example.rishab.ibilivesample.adapter.LocationAdapter;
@@ -24,6 +25,7 @@ public class DiscoverMyPostFragment extends Fragment {
     private ArrayList<LocationsModelClass> locations;
     private RecyclerView recyclerView;
     private Bundle bundle;
+    private ImageView ivGrid;
 
     /**
      * @param mode mode that is being sent
@@ -61,6 +63,13 @@ public class DiscoverMyPostFragment extends Fragment {
         LocationAdapter recyclerViewAdapter = new LocationAdapter(locations, getContext(), bundle.getInt(String.valueOf(R.string.mode)));
         recyclerView = (RecyclerView) view.findViewById(R.id.rv_discover);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+//        ivGrid = (ImageView) view.findViewById(R.id.btn_gridview);
+//        ivGrid.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(final View v) {
+//                recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
+//            }
+//        });
         recyclerView.setAdapter(recyclerViewAdapter);
         return view;
     }

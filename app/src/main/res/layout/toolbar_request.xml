@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_marginStart="@dimen/spacing_normal"
+              android:layout_marginEnd="@dimen/spacing_normal"
+              android:layout_width="match_parent"
+              android:layout_height="?attr/actionBarSize"
+              android:layout_marginTop="@dimen/spacing_normal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@drawable/leftcircular_button"
+        android:gravity="center"
+        android:text="Posts"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:background="@drawable/centerrectangle_button"
+        android:gravity="center"
+        android:text="Map"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_height="match_parent"
+        android:background="@drawable/rightcircular_button"
+        android:text="Network"
+        android:gravity="center"/>
+
+</LinearLayout>

@@ -26,6 +26,7 @@ public class BaseActivity extends AppCompatActivity {
     private View viewMap;
     private View viewMyPosts;
     private View viewMyNetwork;
+    private View viewRequests;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -52,6 +53,7 @@ public class BaseActivity extends AppCompatActivity {
         viewMap = (View) findViewById(R.id.view_map);
         viewMyPosts = (View) findViewById(R.id.view_myposts);
         viewMyNetwork = (View) findViewById(R.id.view_mynetwork);
+        viewRequests = (View) findViewById(R.id.view_request);
 
         viewDiscovery.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,13 +70,19 @@ public class BaseActivity extends AppCompatActivity {
         viewMyNetwork.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
-                mViewPager.setCurrentItem(3);
+                mViewPager.setCurrentItem(4);
             }
         });
         viewMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
                 mViewPager.setCurrentItem(1);
+            }
+        });
+        viewRequests.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                mViewPager.setCurrentItem(3);
             }
         });
 
@@ -99,6 +107,9 @@ public class BaseActivity extends AppCompatActivity {
 
                 }
                 if (position == 3) {
+                    tvTitle.setText("REQUESTS");
+                }
+                if (position == 4) {
                     tvTitle.setText("My Network");
                 }
 
