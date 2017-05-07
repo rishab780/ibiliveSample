@@ -25,7 +25,7 @@ public class RequestsFragment extends Fragment implements Constants {
         View view = inflater.inflate(R.layout.fragment_requests, container, false);
         Log.d("debuglona", "Request");
         LocationAdapter recyclerViewAdapter = new LocationAdapter(REQUEST_FRAG, getContext());
-        Log.d("debudlona", "i m fucked up");
+      
         recyclerView = (RecyclerView) view.findViewById(R.id.rv_requests);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(recyclerViewAdapter);
