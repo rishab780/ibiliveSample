@@ -31,7 +31,7 @@ public class LocationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
      * @param mode    mode
      */
     public LocationAdapter(final int mode, final Context context) {
-        Log.d("debuglona", "Sex on the beach hardcore");
+        
         this.mode = mode;
         this.context = context;
     }
@@ -42,7 +42,7 @@ public class LocationAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
      * @param mode      mode of the adapter
      */
     public LocationAdapter(final ArrayList<LocationsModelClass> locations, final Context context, final int mode) {
-        Log.d("debuglona", "Sex on the beach");
+       
         this.locations = locations;
         this.context = context;
         this.mode = mode;
